@@ -4,7 +4,7 @@
 
 ### **1. Substreams Monitoring (✅ ACTIVE)**
 - **Network**: Ethereum mainnet
-- **Infura Key**: `c26971ba32ef4d64a62df06ee38de072`
+- **Infura Key**: [Configure in .env files]
 - **Status**: Monitoring Aave liquidation events
 - **Command**: 
 ```bash
@@ -28,7 +28,7 @@ cd /Users/paulbarba/Desktop/aave-liquidation-bot/substreams
 │                                                         │
 │  📡 Substreams: Monitoring Aave liquidation events     │
 │  🌐 Network: Ethereum mainnet                          │
-│  🔑 Infura: c26971ba32ef4d64a62df06ee38de072           │
+│  🔑 Infura: [Configure in .env files]                  │
 │  📊 Status: ACTIVE and working                          │
 └─────────────────────────────────────────────────────────┘
 ```

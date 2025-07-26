@@ -55,7 +55,7 @@ yarn start
 
 ### Substreams Configuration
 - ✅ Already configured and working
-- ✅ API key: `0fda4137469543cc496b3412f26e1560`
+- ✅ API key: [Configure in .substreams.env]
 - ✅ Network: Ethereum mainnet
 - ✅ Monitoring: Liquidation events
 

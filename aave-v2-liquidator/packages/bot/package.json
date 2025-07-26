@@ -1,0 +1,54 @@
+{
+  "name": "@moola-v2-liquidator/bot",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [
+    "typescript",
+    "bot"
+  ],
+  "author": {
+    "name": "Ashutosh Varma",
+    "url": "https://github.com/ashutoshvarma"
+  },
+  "license": "GPLv3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashutoshvarma/moola-liquidator-v2"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "yarn clean && yarn tsc -b",
+    "clean": "(rm -r ./dist || true)"
+  },
+  "dependencies": {
+    "@celo/contractkit": "^1.3.3",
+    "@moola-v2-liquidator/contracts": "^0.1.0",
+    "@ubeswap/sdk": "^2.1.1",
+    "bignumber.js": "^9.0.0",
+    "bn.js": "^5.2.0",
+    "dotenv": "^10.0.0",
+    "graphql": "^16.0.1",
+    "graphql-request": "^3.6.1",
+    "web3": "^1.6.1",
+    "web3-core": "^1.6.1",
+    "web3-eth-contract": "^1.6.1",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.0",
+    "@types/node": "^16.11.10",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  }
+}

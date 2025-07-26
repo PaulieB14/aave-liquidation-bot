@@ -1,0 +1,28 @@
+{
+  "name": "moola-liquidator-v2",
+  "packageManager": "yarn@3.2.0-rc.5",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "yarn compile",
+    "compile": "yarn workspace @moola-v2-liquidator/contracts compile",
+    "deploy": "yarn workspace @moola-v2-liquidator/contracts deploy:celo",
+    "build": "yarn workspace @moola-v2-liquidator/bot build",
+    "start": "yarn build && yarn workspace @moola-v2-liquidator/bot node dist/index.js",
+    "start:prod": "yarn workspace @moola-v2-liquidator/bot node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.10",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  }
+}

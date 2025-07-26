@@ -1,0 +1,34 @@
+specVersion: v0.1.0
+package:
+  name: aave_liquidation_bot_eth
+  version: v0.1.2
+  url: "https://github.com/PaulieB14/aave-liquidation-bot"
+  description: "Aave liquidation monitoring Substreams module for Ethereum mainnet"
+
+imports:
+  ethereum: https://github.com/streamingfast/substreams-ethereum/releases/download/v0.10.5/substreams-ethereum-v0.10.5.spkg
+
+protobuf:
+  files:
+    - mydata.proto
+  importPaths:
+    - ./proto
+  excludePaths:
+    - sf/substreams
+    - google
+
+binaries:
+  default:
+    type: wasm/rust-v1
+    file: ./target/wasm32-unknown-unknown/release/aave_liquidation_substreams.wasm
+
+modules:
+ - name: map_aave_events
+   kind: map
+   initialBlock: 24000000
+   inputs:
+   - source: sf.ethereum.type.v2.Block
+   output:
+    type: proto:mydata.v1.MyData
+
+network: mainnet

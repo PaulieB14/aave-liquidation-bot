@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package mydata.v1;
+
+message MyData {
+  repeated Event events = 1;
+}
+
+message Event {
+  string block_number = 1;
+  string transaction_hash = 2;
+  string contract_address = 3;
+  string user_address = 4;
+  string collateral_asset = 5;
+  string debt_asset = 6;
+  repeated Attribute attributes = 7;
+}
+
+message Attribute {
+  string key = 1;
+  string value = 2;
+}
